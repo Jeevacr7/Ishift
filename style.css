@@ -16,6 +16,10 @@
     color: var(--bright-blue) !important;
 }
 
+.navbar {
+    padding: 20px 0;
+}
+
 /* Home */
 .home-banner {
     width: 100%;
@@ -84,7 +88,8 @@
 
 
 /* Services */
-.services {
+.services,
+.careers {
     padding-top: 130px;
 }
 
@@ -174,7 +179,7 @@ h4 {
 
 .solutions {
     background-color: var(--light-blue);
-    padding: 80px 0 40px 0;
+    padding: 130px 0 40px 0;
     box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -307,32 +312,18 @@ footer {
 /*About */
 
 .about {
-    padding: 80px 0;
-    background: #004a99;
-    margin-bottom: 20px;
-}
-
-.section-header h3,
-.section-header p {
-    color: var(--bs-primary-color);
+    padding: 130px 0;
+    background-color: var(--light-grey-yellow);
 }
 
 .card {
-    background: #00458f;
-    border-color: #00458f;
-    border-radius: 10px;
-    margin: 0 15px;
-    padding: 15px 0;
-    text-align: center;
-    color: #fff;
-    transition: 0.3s ease-in-out;
-    height: 100%;
+    border-top: 3px solid #012169;
+    padding: 60px 32px;
 }
 
 .card i {
     font-size: 48px;
-    padding-top: 15px;
-    color: #bfddfe;
+    color: var(--deep-navy);
 }
 
 .card-body {
@@ -340,14 +331,92 @@ footer {
     padding: 1rem 1rem;
 }
 
-#why-us .card h5 {
-    font-size: 22px;
-    font-weight: 600;
+.card h5 {
+    color: #012169;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.286em;
 }
 
 .card p {
     font-size: 15px;
-    color: #d8eafe;
+}
+
+.about-cards {
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-column-gap: 26px;
+    grid-row-gap: 26px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* Careers */
+.story {
+    background-color: #012169;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 40px;
+}
+
+.subtitle {
+    letter-spacing: .06em;
+    margin-bottom: 14px;
+    font-size: 30px;
+    line-height: 1em;
+    color: var(--light-grey-yellow);
+}
+
+.story-content-top-main-content p {
+    color: var(--light-grey);
+}
+
+.benefits {
+    padding: 60px 0;
+}
+
+.apply-container {
+    text-align: center;
+    background-color: #012169;
+    height: 398px;
+    position: relative;
+}
+
+.stripe {
+    position: absolute;
+    background-color: red;
+    width: 400px;
+    transform: skew(139deg, 360deg);
+    height: inherit;
+}
+
+.button-secondary {
+    color: #012169;
+    text-align: center;
+    transform-style: preserve-3d;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 22px 56px 24px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1em;
+    transition: transform .3s;
+    display: inline-block;
+}
+
+.button-secondary:hover {
+    transform: scale(1.025, 1.025);
 }
 
 @media (max-width:770px) {
@@ -369,7 +438,7 @@ footer {
     .services-intro p,
     .solutions-intro p,
     .section-header p {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .about-container {
@@ -386,11 +455,23 @@ footer {
     }
 
     .about-container {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     h4 {
         font-size: var(--font-size-4);
+    }
+
+    .icon-box {
+        gap: 16px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -401,6 +482,52 @@ footer {
 
     .button-wrapper a {
         flex: 1;
+    }
+
+    .navbarMenu {
+        display: none;
+    }
+
+    .navbar a,
+    .menu-btn {
+        margin-left: 16px;
+        z-index: 1033;
+    }
+
+    .navbar-nav {
+        align-items: flex-end;
+    }
+
+    .navbar .icon {
+        color: var(--bs-primary-color);
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        z-index: 1033;
+        margin-right: 16px;
+        background: var(--deep-navy);
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: #f2f1ee;
+        width: 100%;
+        z-index: 1031;
+        padding: 75px 16px 0;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    .open-nav {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -418,5 +545,23 @@ footer {
 
     .about-container {
         margin-bottom: 40px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:1024px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar .icon {
+        display: none;
     }
 }
