@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     list-style-type: none;
     color: inherit;
 }
@@ -19,7 +19,9 @@ li {
 }
 
 header {
-    background: white;
+    background: var(--bs-primary-color);
+    width: 100%;
+    height: 90px;
 }
 
 ul {
