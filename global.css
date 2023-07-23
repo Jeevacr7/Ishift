@@ -40,42 +40,10 @@ p {
     font-family: Roboto Mono, sans-serif;
 }
 
-/* @media (min-width: 576px) {
-
-    .container,
-    .container-sm {
-        max-width: 540px;
-    }
+label {
+    color: #012169;
+    margin-bottom: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.765em;
 }
-
-@media (min-width: 768px) {
-
-    .container,
-    .container-md,
-    .container-sm {
-        max-width: 720px;
-    }
-}
-
-
-@media (min-width: 992px) {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1400px) {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 1320px;
-    }
-} */
